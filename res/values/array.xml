@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <string-array name="name">
+        
+       
+         <item >大厅详情</item>
+         <item >房间一数据</item>
+          <item >房间二湿度</item>
+           <item  >二氧化碳</item>
+            <item >室外风速</item> 
+            <item >紫外线指数</item>
+            <item >穿衣指数</item>
+        
+    </string-array>
+     <string-array name="affair_level">
+        
+        <item name="dda">主风机</item>
+         <item >卫生间风机</item>
+          
+        
+        
+    </string-array>
+      <string-array name="room">
+        
+        <item name="dda">室外</item>
+         <item >大厅</item>
+           <item >主卧</item>
+         <item >次卧</item>
+         <item >卫生间</item>
+    </string-array>
+</resources>

@@ -1,0 +1,81 @@
+<LinearLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:background="@drawable/banner_bg"
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     >
+
+
+
+        <RadioGroup 
+             android:id="@+id/radioGroup_main"
+       		 android:orientation="vertical"
+		     android:layout_width="wrap_content"
+		     android:padding="20dp"
+		     android:background="@drawable/qwe2"
+		     android:layout_height="match_parent"
+		     
+        	 android:gravity="center">
+        	 <RadioButton 
+        	      android:layout_height="0dp"
+		         android:layout_weight="1"
+        	     />
+        	 
+            <RadioButton 
+                android:id="@+id/rb_main_menu1"
+		         style="@style/TopMenu"
+		         android:text="系统首页"
+		         android:layout_height="0dp"
+		         android:layout_weight="1"
+		         />
+             
+            <RadioButton 
+                android:id="@+id/rb_main_menu2"
+		         style="@style/TopMenu"
+		         android:text="风机控制"
+		         android:layout_height="0dp"
+		         android:layout_weight="1"
+		         />
+
+            <RadioButton
+                android:id="@+id/rb_main_menu3"
+                style="@style/TopMenu"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:text="@string/rejiahuan" />
+
+            <RadioButton 
+                android:id="@+id/rb_main_menu4"
+		         style="@style/TopMenu"
+		         android:layout_height="0dp"
+		         android:layout_weight="1"
+		         android:text="数据详情"
+		         />
+             <RadioButton 
+                android:id="@+id/rb_main_menu5"
+		         style="@style/TopMenu"
+		         android:layout_height="0dp"
+		         android:layout_weight="1"
+		         android:text="更多设置"
+		         />
+              <RadioButton 
+                android:id="@+id/rb_main_menu6"
+		         style="@style/TopMenu"
+		         android:layout_height="0dp"
+		         android:layout_weight="1"
+		         android:text="@string/qijiayiju"
+		         />
+        </RadioGroup>
+        
+    
+    <FrameLayout
+        android:id="@+id/Fragment_jiemian"
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:orientation="vertical"
+       android:layout_weight="8">
+        
+    </FrameLayout>
+    
+</LinearLayout>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+    
+<LinearLayout 
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_weight="5"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:background="@drawable/back_b"
+        >
+       <RelativeLayout 
+           android:layout_height="0dp"
+           android:layout_width="fill_parent"
+           android:layout_weight="1"
+           >
+
+           <TextView
+               android:id="@+id/textView_fengsuzhi"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignBaseline="@+id/textView1"
+               android:layout_alignBottom="@+id/textView1"
+               android:layout_marginLeft="56dp"
+               android:layout_toRightOf="@+id/textView1"
+               android:text="2m/s" 
+               android:textColor="#ffffff"
+               />
+
+           <TextView
+               android:id="@+id/textView1"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentLeft="true"
+               android:layout_centerVertical="true"
+               android:layout_marginLeft="223dp"
+               android:text="风速值："
+               android:textColor="#ffffff"
+               android:textSize="30px" />
+
+           <Button
+               android:id="@+id/button_huoqufengsu"
+               style="?android:attr/buttonStyleSmall"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentLeft="true"
+               android:layout_alignParentTop="true"
+               android:layout_marginLeft="42dp"
+               android:text="获取风速值" />
+           
+       </RelativeLayout>
+
+       <RelativeLayout
+           android:layout_width="fill_parent"
+           android:layout_height="0dp"
+           android:layout_weight="1" 
+           android:gravity="center">
+
+           <Switch
+               android:id="@+id/switch_fengji1"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="风机开关：" />
+       </RelativeLayout>
+
+       <LinearLayout 
+           android:layout_height="0dp"
+           android:padding="20dp"
+           android:layout_width="fill_parent"
+           android:layout_weight="1"
+           android:orientation="horizontal">
+
+           <TextView
+               android:id="@+id/textView3"
+               android:layout_width="0dp"
+               android:layout_weight="1"
+               android:layout_height="wrap_content"
+               android:textSize="20px"
+               android:text="风力等级：" />
+
+           <Button
+               android:id="@+id/button1"
+              android:layout_width="0dp"
+               android:layout_weight="1"
+               android:layout_height="wrap_content"
+               android:text="1档" />
+
+           <Button
+               android:id="@+id/button2"
+               android:layout_width="0dp"
+               android:layout_weight="1"
+               android:layout_height="wrap_content"
+               android:text="2档" />
+
+           <Button
+               android:id="@+id/button3"
+              android:layout_width="0dp"
+               android:layout_weight="1"
+               android:layout_height="wrap_content"
+               android:text="3档" />
+
+           <Button
+               android:id="@+id/button4"
+              android:layout_width="0dp"
+               android:layout_weight="1"
+               android:layout_height="wrap_content"
+               android:text="4档" />
+           
+       </LinearLayout>
+          
+       </LinearLayout>
+      
+    
+</LinearLayout>

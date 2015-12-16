@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true" android:drawable="@drawable/button_press" /><!--按下时的背景-->
+    <item android:state_focused="true" android:drawable="@drawable/button_press" /><!--获得焦点时的背景-->
+    <item android:state_selected="true" android:drawable="@drawable/button_press" /><!--选中状态的背景-->
+    <item android:drawable="@drawable/button_normal" /> <!--默认背景-->
+</selector>

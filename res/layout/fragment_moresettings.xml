@@ -1,0 +1,199 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" 
+    android:padding="15dp"
+    android:background="@drawable/main_show2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/set_b"
+        android:paddingLeft="180dp"
+           android:paddingRight="180dp"
+           android:paddingTop="150dp"
+           android:paddingBottom="120dp" >
+       <LinearLayout 
+           android:layout_height="match_parent"
+           android:layout_width="match_parent"
+           android:padding="25dp"
+           android:background="@drawable/setting_bg"
+           android:orientation="vertical"
+           >
+           <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp" 
+            android:layout_weight="1"
+            android:padding="4dp"
+            >
+
+            <CheckBox
+                android:id="@+id/checked_button1"
+                android:layout_width="150dp"
+                android:layout_height="70dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="100dp"
+               android:button="@null"
+                android:layout_toRightOf="@+id/textView1"
+                android:background="@drawable/seting_butt1" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="60dp"
+                android:text="无人模式选择"
+                android:textSize="20px" 
+                />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="4dp" >
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="60dp"
+                android:text="环境报警开关"
+                android:textSize="20px" />
+
+            <CheckBox
+                android:id="@+id/checked_button2"
+                android:layout_width="150dp"
+                android:layout_height="70dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="102dp"
+                android:layout_toRightOf="@+id/textView2"
+                android:background="@drawable/seting_butt2"
+                android:button="@null" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp" 
+            android:layout_weight="1" 
+            android:padding="4dp">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="60dp"
+                android:text="通风时长设置"
+                android:textSize="20px" />
+
+            <Button
+                android:id="@+id/button_tongfeng"
+                android:layout_width="100dp"
+                android:onClick="buttonClick"
+                android:layout_height="50dp"
+                android:layout_alignBaseline="@+id/textView3"
+                android:layout_alignBottom="@+id/textView3"
+                android:layout_marginLeft="100dp"
+                android:layout_toRightOf="@+id/textView3"
+                android:background="@drawable/set_button3" />
+
+        </RelativeLayout>
+<RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp" 
+            android:layout_weight="1" 
+            android:padding="4dp">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="60dp"
+                android:text="自动通风设置"
+                android:textSize="20px" />
+
+            <Button
+                android:id="@+id/button_naozhong"
+                android:layout_width="100dp"
+                android:onClick="buttonClick"
+                android:layout_height="50dp"
+                android:layout_alignBaseline="@+id/textView3"
+                android:layout_alignBottom="@+id/textView3"
+                android:layout_marginLeft="100dp"
+                android:layout_toRightOf="@+id/textView3"
+                android:background="@drawable/set_button3" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp" 
+            android:layout_weight="1"
+            android:padding="4dp" >
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="60dp"
+                android:text="系统时间设置"
+                android:textSize="20px" />
+
+            <Button
+                android:id="@+id/button_shijian"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:onClick="buttonClick"
+                android:layout_alignBaseline="@+id/textView4"
+                android:layout_alignBottom="@+id/textView4"
+                android:layout_marginLeft="100dp"
+                android:layout_toRightOf="@+id/textView4"
+                android:background="@drawable/set_button3" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp" 
+            android:layout_weight="1" >
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="60dp"
+                android:text="数据一键清空"
+                android:textSize="20px" />
+
+            <Button
+                android:id="@+id/button_delete"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:onClick="buttonClick"
+                android:layout_alignBaseline="@+id/textView5"
+                android:layout_alignBottom="@+id/textView5"
+                android:layout_marginLeft="106dp"
+                android:layout_toRightOf="@+id/textView5"
+                android:background="@drawable/setting_button" />
+
+        </RelativeLayout>
+       </LinearLayout>
+        
+
+    </LinearLayout>
+
+</LinearLayout>

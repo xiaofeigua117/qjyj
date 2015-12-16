@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" 
+android:paddingTop="50dp"   
+android:paddingLeft="100dp"
+android:paddingRight="100dp"
+android:paddingBottom="50dp"
+android:background="@drawable/main_show2"
+ >
+<LinearLayout 
+    android:layout_weight="1.5"
+    android:layout_height="match_parent"
+    android:layout_width="0dp"
+    android:orientation="vertical"
+    >
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/q1"
+        android:gravity="center"
+        android:text="室内温度"
+       android:textSize="30px"/>
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textSize="30px"
+                android:background="@drawable/q3"
+        
+        android:text="27.2C"/>
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+                android:background="@drawable/q1"
+        
+        android:gravity="center"
+        android:text="室外温度"
+        android:textSize="30px"/>
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+                android:background="@drawable/q3"
+        android:textSize="30px"
+        android:text="19.3C"/>
+    
+</LinearLayout>
+<View android:layout_weight="0.2"
+    android:layout_width="0dp"
+    android:layout_height="match_parent"/>
+<LinearLayout 
+    android:layout_weight="1.5"
+    android:layout_height="match_parent"
+    android:layout_width="0dp"
+    
+    android:orientation="vertical"
+    >
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:background="@drawable/q1"
+        android:text="空气质量详情"
+        android:textSize="30px"/>
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:background="@drawable/q3"
+        android:orientation="vertical"
+       >
+       <TextView 
+            android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="co含量低"
+        android:textSize="20px"
+           />
+       <TextView 
+            android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="空气甲醛无"
+        android:textSize="20px"
+           />
+       <TextView 
+            android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="其他。。"
+        android:textSize="20px"
+           />
+       </LinearLayout>
+</LinearLayout>
+<View android:layout_weight="0.2"
+    android:layout_width="0dp"
+    android:layout_height="match_parent"/>
+<LinearLayout 
+    android:layout_weight="1.5"
+    android:layout_height="match_parent"
+    android:layout_width="0dp"
+ android:background="@drawable/q1"
+ android:orientation="vertical"
+    >
+    <TextView 
+         android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:background="@drawable/q1"
+        android:text="室外风速"
+        android:textSize="30px"
+        />
+    <TextView 
+         android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:background="@drawable/q3"
+        android:text="3m/s"
+        android:textSize="30px"
+        />
+    <TextView 
+         android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:background="@drawable/q1"
+        android:text="空气湿度"
+        android:textSize="30px"
+        />
+    <TextView 
+         android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:background="@drawable/q3"
+        android:text="55%RH"
+        android:textSize="30px"/>
+</LinearLayout>
+  
+</LinearLayout>

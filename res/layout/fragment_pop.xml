@@ -1,0 +1,40 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   
+    android:background="@drawable/kaishi"
+    tools:context="com.qijiayiju.qijiayiju_v2.PopActivity$PlaceholderFragment" >
+
+    <ImageView
+        android:id="@+id/imageView_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="56dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/imageView_start"
+        android:layout_marginLeft="174dp"
+        android:textSize="20px"
+        android:text="技能设计           创意生活" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_alignTop="@+id/imageView_start"
+        android:layout_marginTop="38dp"
+        android:text="齐家怡居智能控制系统"
+        android:textSize="40px"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</RelativeLayout>

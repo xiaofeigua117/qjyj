@@ -1,0 +1,160 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/holo_blue_light"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.76" >
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="500dp"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_weight="3.30"
+        android:background="@drawable/denglu_kuang" 
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp" 
+            android:orientation="horizontal"
+            android:layout_weight="2"
+            
+            >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:textSize="50px"
+                android:textColor="@android:color/holo_blue_light"
+                android:text="用户登录" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp" 
+            android:orientation="vertical"
+            android:layout_weight="3"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" 
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_height="match_parent"
+                    android:text="用户名"
+                    android:textColor="@android:color/holo_blue_light"
+                    android:textSize="33px" />
+              <LinearLayout 
+                  android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:padding="10dp"
+                    android:background="@drawable/edit"
+                  >
+                  <EditText
+                    android:id="@+id/name_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                   
+                    android:ems="10"
+                    android:inputType="textPersonName" >
+
+                    <requestFocus />
+                </EditText>
+                
+              </LinearLayout>
+              <LinearLayout 
+                  android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                  ></LinearLayout>
+              
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp" 
+                android:layout_weight="1"
+                android:paddingRight="10dp"
+                >
+             
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:layout_height="match_parent"
+                    android:text="密码"
+                    android:textColor="@android:color/holo_blue_light"
+                    android:textSize="33px" />
+
+                 <LinearLayout 
+                  android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:background="@drawable/edit"
+                    android:padding="10dp"
+                  >
+                  <EditText
+                    android:id="@+id/password_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                   
+                    android:ems="10"
+                    android:inputType="numberPassword" >
+
+                    <requestFocus />
+                </EditText>
+              </LinearLayout>
+<LinearLayout 
+                  android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2"
+                  ></LinearLayout>
+            </LinearLayout> 
+            </LinearLayout>
+            
+       
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp" 
+            android:layout_weight="2"
+            >
+
+            <Button
+                android:id="@+id/denglu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+				android:background="@drawable/butt"
+                 />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" >
+    </RelativeLayout>
+
+</LinearLayout>

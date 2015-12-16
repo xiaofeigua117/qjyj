@@ -1,0 +1,151 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/about_back"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:orientation="vertical" >
+        <TextView 
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="齐家怡居"
+            android:textSize="50px"
+            android:textColor="#ffffff"
+        />
+        
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2" 
+        >
+<LinearLayout 
+    android:layout_height="match_parent"
+    android:layout_width="0dp"
+    android:layout_weight="0"
+    ></LinearLayout>
+<LinearLayout 
+    android:layout_height="match_parent"
+    android:layout_width="0dp"
+    android:layout_weight="1.3"
+    android:padding="50dp"
+    android:orientation="horizontal"
+    >
+    <LinearLayout 
+        android:layout_height="match_parent"
+    android:layout_width="0dp"
+    android:layout_weight="1"
+    android:padding="20dp"
+        >
+        <ListView
+        android:id="@+id/listView1"
+        android:layout_width="0dp"
+        android:layout_weight="0.8"
+        android:layout_height="wrap_content"
+        >
+        </ListView>
+    </LinearLayout>
+    
+    
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3" 
+        android:background="@drawable/detail_b0"
+        android:paddingTop="30dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp">
+
+        <TextView
+            android:id="@+id/textView_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15px"
+            android:text="@string/qijia" />
+
+    </RelativeLayout>
+  
+</LinearLayout>
+        
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.9"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="30dp" >
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="详情查看企业官网  ↓  " 
+                android:textSize="15px"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView5"
+                android:layout_below="@+id/textView5"
+                android:layout_marginTop="21dp"
+                android:autoLink="web"
+                android:text="www.qijiayiju.com"
+                android:textColor="#ffffff"
+                android:textSize="20px" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="0.8"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15px"
+                android:text="电话：010-61429395" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15px"
+                android:text="地 址：北京市顺义区南法信旭辉空港中心" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15px"
+                android:text="邮箱：info@qijiayiju.com" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
