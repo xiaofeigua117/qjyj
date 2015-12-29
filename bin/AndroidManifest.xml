@@ -54,7 +54,7 @@
         <activity
             android:name="com.qijiayiju.qijiayiju_v2.TongfengAutoActivity"
             android:label="@string/title_activity_tongfeng_auto"
-            android:theme="@style/MyDialog" >
+            android:theme="@android:style/Theme.Dialog" >
         </activity>
         
         <receiver 

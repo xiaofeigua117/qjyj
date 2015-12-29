@@ -140,7 +140,7 @@
                            android:layout_weight="1"
                            android:gravity="center"
                            android:layout_width="match_parent"
-                           android:text="室内温度"/>
+                           android:text="大厅温度"/>
                        <TextView 
                              android:id="@+id/show_shiwen"
                            android:layout_height="0dp"
@@ -179,11 +179,32 @@
                          android:text="26℃"
                          android:gravity="center"/>
                  </LinearLayout>
-                       <TextView 
-                     android:layout_height="match_parent"
-                     android:layout_width="0dp"
-                     android:layout_weight="1"/>
-                 
+                     <LinearLayout 
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                     <TextView 
+                      
+                         android:layout_height="0dp"
+                         android:layout_weight="1"
+                         android:gravity="center"
+                         
+                         android:textColor="#ffffff"
+                         android:textSize="20px"
+                         android:layout_width="match_parent"
+                         android:text="卧室温度"/>
+                      <TextView 
+                          android:background="@drawable/wen_show"
+                             android:id="@+id/wendu_woshi"
+                         android:layout_height="0dp"
+                         android:textColor="#000000"
+                         android:textSize="20px"
+                         android:layout_weight="1"
+                         android:layout_width="match_parent"
+                         android:text="26℃"
+                         android:gravity="center"/>
+                 </LinearLayout>
              </LinearLayout>
               <LinearLayout 
                  android:layout_height="0dp"
@@ -244,20 +265,32 @@
                          android:text="45% RH"
                          android:gravity="center"/>
                  </LinearLayout>
-                 <RelativeLayout 
+                   <LinearLayout 
                     android:layout_height="match_parent"
                     android:layout_width="0dp"
-                    android:layout_weight="1">
-
-                     <TextView
-                         android:id="@+id/Text_chuanghu"
-                         android:layout_width="wrap_content"
-                         android:layout_height="wrap_content"
-                         android:layout_centerHorizontal="true"
-                         android:layout_centerVertical="true"
-                         android:text="TextView" />
-
-                 </RelativeLayout>
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                     <TextView 
+                      
+                         android:layout_height="0dp"
+                         android:layout_weight="1"
+                         android:gravity="center"
+                         
+                         android:textColor="#ffffff"
+                         android:textSize="20px"
+                         android:layout_width="match_parent"
+                         android:text="卧室湿度"/>
+                      <TextView 
+                          android:background="@drawable/wen_show"
+                             android:id="@+id/shidu_woshi"
+                         android:layout_height="0dp"
+                         android:textColor="#000000"
+                         android:textSize="20px"
+                         android:layout_weight="1"
+                         android:layout_width="match_parent"
+                         android:text="26℃"
+                         android:gravity="center"/>
+                 </LinearLayout>
              </LinearLayout>>
               <LinearLayout 
                  android:layout_height="0dp"
@@ -295,14 +328,38 @@
                          android:text="55 μg/m3"
                          android:gravity="center"/>
                       </LinearLayout>
-                    <TextView 
-                     android:layout_height="match_parent"
-                     android:layout_width="0dp"
-                     android:layout_weight="1"/>
-                      <TextView 
-                     android:layout_height="match_parent"
-                     android:layout_width="0dp"
-                     android:layout_weight="1"/>
+                     <LinearLayout 
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingTop="40dp"
+                    android:paddingLeft="20dp"
+                    >
+
+                         <LinearLayout
+                             android:layout_width="match_parent"
+                             android:layout_height="match_parent" 
+                             android:orientation="vertical"
+                             android:gravity="center"
+                             android:background="@drawable/tip">
+
+                             <TextView
+                                 android:id="@+id/textView_tip1"
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:text="" />
+
+                             <TextView
+                                 android:id="@+id/textView_tip2"
+                                 android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content"
+                                 android:text="当前为舒适状态！" />
+
+                         </LinearLayout>
+                     
+                 </LinearLayout>
                  
              </LinearLayout>
 

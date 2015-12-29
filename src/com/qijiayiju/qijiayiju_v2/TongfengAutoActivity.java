@@ -18,6 +18,7 @@ import android.os.Bundle;
 import android.text.InputType;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -34,6 +35,10 @@ public class TongfengAutoActivity extends Activity {
      private Button buttond;
      private Button buttonc;
      EditText editText;
+     Button button_return;
+     public static int set_time=0;
+     public static Boolean box1_tatus=false;
+     public static Boolean box2_tatus=false;
      public static Boolean fengji_choose1=false;
      public static Boolean fengji_choose2=false;
      public static Boolean fengji_choose3=false;
@@ -54,9 +59,13 @@ public class TongfengAutoActivity extends Activity {
  		public void onTimeSet(TimePicker arg0, int hour, int min) {
  			// TODO Auto-generated method stub
  			setReminder(true, hour, min,fengji_choose1,fengji_choose2,input_time1);
+ 			  set_time=Integer.parseInt(editText_1.getText().toString());
+ 			  fengji_choose1=box1_tatus;
+ 			  fengji_choose2=box2_tatus;
  			SharedPreferences time3Share = getPreferences(2);  
 	           SharedPreferences.Editor editor = time3Share.edit();  
 	           editor.putString("TIME1", hour+":"+min+"");  
+	           editor.putString("TIME0", set_time+"");
 	           editor.commit();
 	           Log.i("-----------timepicker", hour+min+"");
 	           Toast.makeText(TongfengAutoActivity.this,"已设定通风时间为 "+hour+":"+min,  
@@ -70,6 +79,7 @@ public class TongfengAutoActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.fragment_tongfeng_auto);
 		
 		context=this;
@@ -81,10 +91,17 @@ public class TongfengAutoActivity extends Activity {
 		buttond=(Button)findViewById(R.id.button_d);
 		box1=(CheckBox)findViewById(R.id.checkBox1);
 		box2=(CheckBox)findViewById(R.id.checkBox2);
-		editText_1=(EditText)findViewById(R.id.editText1);
-		editText_1.setInputType(InputType.TYPE_NULL);
+		
+		
+		editText_1=(EditText)findViewById(R.id.editText_time);
 		textView_time1=(TextView)findViewById(R.id.textView_time1);
 		textView_time1.setText(time1String);
+	    if(fengji_choose1){
+	    	box1.setChecked(true);
+	    }if(fengji_choose2){
+	    	box2.setChecked(true);
+	    }
+		editText_1.setText(settings.getString("TIME0", defalutString));
 		
 		
 		box1.setOnCheckedChangeListener(new OnCheckedChangeListener() {
@@ -92,12 +109,10 @@ public class TongfengAutoActivity extends Activity {
 			@Override
 			public void onCheckedChanged(CompoundButton arg0, boolean arg1) {
 				// TODO Auto-generated method stub
-				if(arg1){
-					fengji_choose1=true;
-				}
-				else{
-					fengji_choose1=false;
-				}
+			
+					//fengji_choose1=true;
+					box1_tatus=arg1;
+				
 				
 			}
 		});
@@ -106,12 +121,7 @@ public class TongfengAutoActivity extends Activity {
 			@Override
 			public void onCheckedChanged(CompoundButton arg0, boolean arg1) {
 				// TODO Auto-generated method stub
-				if(arg1){
-					fengji_choose2=true;
-				}
-				else{
-					fengji_choose2=false;
-				}
+				box2_tatus=arg1;
 				
 			}
 		});
@@ -185,7 +195,8 @@ private void setReminder(boolean b,int hour,int min,Boolean b1,Boolean b2,String
         AlarmManager am=(AlarmManager)getSystemService("alarm");
         // create a PendingIntent that will perform a broadcast
         Intent intent=new Intent(this,MyReceiver.class);
-       
+        
+      
         PendingIntent pi= PendingIntent.getBroadcast(this, 0, intent, 0);
         if(b){
 //        	Date futureDate = new Date(new Date().getTime() + 86400000);

@@ -21,13 +21,15 @@
             android:text="通风定时1" />
 
         <EditText
-            android:id="@+id/editText1"
+            android:id="@+id/editText_time"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:ems="3"
+            android:focusable="false"
             android:clickable="true"
             android:onClick="EditClick"
+            android:maxLength="2"
             android:inputType="number" 
             android:hint="选择通风时间">
 			
@@ -91,6 +93,7 @@
                 android:id="@+id/button_b"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:focusable="true"
                 android:text="删除定时" />
 
         </LinearLayout>
@@ -118,6 +121,7 @@
             android:layout_height="wrap_content"
             android:ems="3"
             android:hint="通风时间"
+            android:focusable="false"
             android:textColorHint="#ffffff"
             android:inputType="number" >
 
@@ -183,21 +187,5 @@
 
     </LinearLayout>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:gravity="center" >
-
-        <Button
-            android:id="@+id/button1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:background="@drawable/eeturn"
-            />
-
-    </RelativeLayout>
 
 </LinearLayout>

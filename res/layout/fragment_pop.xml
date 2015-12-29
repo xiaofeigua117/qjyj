@@ -24,7 +24,7 @@
         android:layout_below="@+id/imageView_start"
         android:layout_marginLeft="174dp"
         android:textSize="20px"
-        android:text="技能设计           创意生活" />
+        android:text="创意设计           享受生活" />
 
     <TextView
         android:id="@+id/textView2"

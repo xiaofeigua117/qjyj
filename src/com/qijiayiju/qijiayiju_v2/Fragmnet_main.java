@@ -41,6 +41,8 @@ public class Fragmnet_main extends Fragment {
     private TextView textView_shiwen;
     private TextView textView_shiwaishidu;
     private TextView textView_shineishidu;
+    private TextView textView_woshiwendu;
+    private TextView textView_woshishidu;
     private Button button_shuaxin;
     private TextView textView_co2;
     private TextView textView_shiwai;
@@ -60,14 +62,18 @@ public class Fragmnet_main extends Fragment {
 				time=time.substring(12);
 				jishu=jishu+1;
 			    if(jishu==5){
-			    	MySeriailPort.getSeriail().sendData("0103000b000435cb", "HEX");
+			    	//MySeriailPort.getSeriail().sendData("0103000b000435cb", "HEX");
+			    	MySeriailPort.getSeriail().sendData("0103000b000835ce", "HEX");
+			    	//000b0008   35ce
 			    	//MySeriailPort.getSeriail().sendData("0103000c00014409", "HEX");
 			    //	MySeriailPort.getSeriail().sendData("0103000d000115c9", "HEX");
 			    	textView_shiwen.setText((float)(Math.round(MainActivity.shiwen*10))/10+"¡æ");
 			    	textView_shineishidu.setText( (float)(Math.round(MainActivity.shineishidu*10))/10+"Rh%");
 			    	textView_shiwai.setText((float)((Math.round(MainActivity.shiwaiwendu)*10))/10+"¡æ");
 			    	textView_shiwaishidu.setText((float)(Math.round(MainActivity.shiwaishidu*10))/10+"Rh%");
-			    	
+			    	textView_co2.setText((float)(Math.round(MainActivity.shineico2))+"ppm");
+			    	textView_woshiwendu.setText((float)(Math.round(MainActivity.woshiwendu1*10))/10+"¡æ");
+			    	textView_woshishidu.setText((float)(Math.round(MainActivity.woshishidu1*10))/10+"Rh%");
 			    	
 			    	jishu=0;
 			    }
@@ -144,6 +150,9 @@ public class Fragmnet_main extends Fragment {
 		       textView_co2=(TextView)view.findViewById(R.id.co2_value);
 		       textView_shineishidu=(TextView)view.findViewById(R.id.shidu);
 		       textView_shiwai=(TextView)view.findViewById(R.id.show_shiwai);
+		       textView_woshiwendu=(TextView)view.findViewById(R.id.wendu_woshi);
+		       textView_woshishidu=(TextView)view.findViewById(R.id.shidu_woshi);
+		       
 		       textView_shiwaishidu=(TextView)view.findViewById(R.id.show_shiwaishidu);
 		     //  textView_shiwen.setText(MainActivity.comm1+" ¡æ");
 		  

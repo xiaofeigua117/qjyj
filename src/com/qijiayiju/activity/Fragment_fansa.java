@@ -311,6 +311,38 @@ public class Fragment_fansa extends Fragment {
     		};
 			timer.schedule(task, i*1000*60);
     	}
+    	
+    	public  static void delay(final Boolean boolean1,int i){
+    		Timer timer=new Timer();
+    	
+    	
+    		TimerTask task=new TimerTask() {
+    			
+    			@Override
+    			public void run() {
+    				// TODO Auto-generated method stub
+    		
+    			//	MySeriailPort.sendOrders(boolean1,0);
+    		
+    				
+    				Message msg = new Message();
+    				msg.obj=boolean1;
+    				if(boolean1){
+    				msg.what=1;
+    				Log.i("booooooooo111", ""+boolean1);
+    				}else{
+    				msg.what = 2;	
+    				Log.i("booooooooo22", ""+boolean1);
+    				}
+					
+					//msg.obj = data;
+					ahandler.sendMessage(msg);
+    			}
+    		};
+			timer.schedule(task, i*1000);
+    	}
+    	
+    	
     	@Override
     	public void onResume() {
     		// TODO Auto-generated method stub

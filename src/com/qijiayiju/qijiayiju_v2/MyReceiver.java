@@ -39,11 +39,11 @@ import android.util.Log;
 	    	 MySeriailPort.sendOrders(true,1);
 	    	 
 	    	 Fragment_fansa.onResume2();
-	    	 Fragment_fansa.delay(true);
+	    	 Fragment_fansa.delay(true,TongfengAutoActivity.set_time);
           }if(TongfengAutoActivity.fengji_choose2){
 	        	  MySeriailPort.sendOrders(false,1);
 	        	  Fragment_fansa.onResume2();
-	 	    	 Fragment_fansa.delay(true);
+	        	  Fragment_fansa.delay(true,TongfengAutoActivity.set_time);
 	        	  
 	          }
 	   

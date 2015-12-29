@@ -5,6 +5,7 @@ package com.qijiayiju.qijiayiju_v2;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
+
 import com.lidroid.xutils.DbUtils;
 import com.lidroid.xutils.exception.DbException;
 import com.qijiayiju.activity.Fragment_fansa;
@@ -62,6 +63,9 @@ public class MainActivity extends FragmentActivity {
 		private String sub2;
 		private String sub3;
 		private String sub4;
+		private String sub5;
+		private String sub6;
+		private String sub7;
 
 		public void handleMessage(android.os.Message msg) {
     		switch (msg.what) {
@@ -77,38 +81,53 @@ public class MainActivity extends FragmentActivity {
 					//	DbUtils dbUtils=DBHelper.getUtils();
 					String mystring=msg.obj.toString();
 					StringBuffer stringBuffer=new StringBuffer(mystring);
-					
+					//
 						sub=(String) stringBuffer.subSequence(9, 14);
 						sub2=(String) stringBuffer.subSequence(15, 20);
 						sub3=(String) stringBuffer.substring(21, 26);
 						sub4=(String) stringBuffer.substring(27, 32);
-						float ad=MyStrinUtils.fiveToint(sub);
-						float ad2=MyStrinUtils.fiveToint(sub2);
-						float ad3=MyStrinUtils.fiveToint(sub3);
-						float ad4=MyStrinUtils.fiveToint(sub4);
-						float mA=(float)(ad/2479.0);
-						float mA2=(float)(ad2/2479.0);
-						float mA3=(float)(ad3/2479.0);
-						float mA4=(float)(ad4/2479.0);
+						sub5=(String)stringBuffer.subSequence(33, 38);
+						sub6=(String)stringBuffer.subSequence(39, 44);
+						sub7=(String)stringBuffer.subSequence(45, 50);
+//						
+//						float ad=MyStrinUtils.fiveToint(sub);
+//						float ad2=MyStrinUtils.fiveToint(sub2);
+//						float ad3=MyStrinUtils.fiveToint(sub3);
+//						float ad4=MyStrinUtils.fiveToint(sub4);
+//						float ad5=MyStrinUtils.fiveToint(sub5);
+//						float ad6=MyStrinUtils.fiveToint(sub6);
+//						float ad7=MyStrinUtils.fiveToint(sub7);
+//						float mA=(float)(ad/2479.0);
+//						float mA2=(float)(ad2/2479.0);
+//						float mA3=(float)(ad3/2479.0);
+//						float mA4=(float)(ad4/2479.0);
 						
 						String s1=sub.replaceAll(" ", "");
 						String s2=sub2.replaceAll(" ", "");
 						String s3=sub3.replaceAll(" ", "");
 						String s4=sub4.replaceAll(" ", "");
+						String s5=sub5.replaceAll(" ", "");
+						String s6=sub6.replaceAll(" ", "");
+						String s7=sub7.replaceAll(" ", "");
 						
 						int a1=Integer.parseInt(s1, 16);
 						int a2=Integer.parseInt(s2, 16);
 						int a3=Integer.parseInt(s3, 16);
 						int a4=Integer.parseInt(s4, 16);
+						int a5=Integer.parseInt(s5, 16);
+						int a6=Integer.parseInt(s6, 16);
+						int a7=Integer.parseInt(s7, 16);
 						
 						//shiwen=(float) ((a1-9687.0)/38748*50);
 						shiwen=((float) (a1*22000/65535)*3/2480-4)*50/16;
 						shineishidu=((float) (a2*22000/65535)*3/2480-4)*100/16;
-						shiwaiwendu=((float) (a4*22000/65535)*3/2480-(16/3+4))*120/16;
+						shiwaiwendu=((float) (a3*22000/65535)*3/2480-(16/4+4))*80/16;
 						//shiwaiwendu=((float)(a1-6400)/512);
 						//shiwaiwendu=(float) ((a1-9687.0)/38748*50);				
-							shiwaishidu=((float) (a3*22000/65535)*3/2480-4)*100/16;
-						
+							shiwaishidu=((float) (a4*22000/65535)*3/2480-4)*100/16;
+							shineico2=((float) (a5*22000/65535)*3/2480-4)*2000/16;
+							woshiwendu1=((float) (a6*22000/65535)*3/2480-4)*50/16;
+							woshishidu1=((float) (a7*22000/65535)*3/2480-4)*100/16;
 //						 shiwen=(mA-4)*50/16;
 //						 shineishidu=(mA2-4)*100/16;
 //					shiwaiwendu=(mA3-4)*120/16;
@@ -128,6 +147,7 @@ public class MainActivity extends FragmentActivity {
 					entity.setWendu_shiwai(shiwaiwendu+"");
 					entity.setShidu_shinei(shineishidu+"");
 					entity.setWendu_shinei(shiwen+"");
+					entity.setCo2(shineico2+"");
 				    try {
 				    	
 					dbUtils=	DBHelper.getUtils();
