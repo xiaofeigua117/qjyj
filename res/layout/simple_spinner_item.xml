@@ -3,7 +3,7 @@
     android:id="@android:id/text1"
     android:paddingLeft="5dip"
     android:paddingRight="5dip"
-    android:gravity="center_vertical"
+    android:gravity="center"
     android:textColor="#000000"
     android:singleLine="true"
     android:textSize="25px"

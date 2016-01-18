@@ -9,13 +9,55 @@
         android:layout_height="match_parent"
         android:orientation="vertical" >
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_weight="0.6"
             android:background="@drawable/yejing"
             >
-        </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView_timeset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView_status"
+                android:layout_below="@+id/textView_status"
+                android:layout_marginTop="33dp"
+                android:text="自动制热时间     19:30—7:00"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/textView_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="168dp"
+                android:layout_marginTop="49dp"
+                android:text="热泵已关闭"
+                android:textSize="20px" />
+
+            <TextView
+                android:id="@+id/power_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textView_status"
+                android:layout_alignBottom="@+id/textView_status"
+                android:layout_marginRight="32dp"
+                android:layout_toLeftOf="@+id/textView_timeset" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textView_status"
+                android:layout_alignBottom="@+id/textView_status"
+                android:layout_marginLeft="62dp"
+                android:layout_toRightOf="@+id/textView_timeset"
+                android:text="制热模式"
+                android:textSize="20px" />
+
+        </RelativeLayout>
 
    <LinearLayout
             android:layout_width="match_parent"
@@ -27,14 +69,74 @@
        <LinearLayout
            android:layout_width="0dp"
            android:layout_weight="1"
+           android:background="@drawable/inner_ri"
            android:layout_height="match_parent"
-           android:orientation="vertical" >
+           android:orientation="vertical" 
+           android:padding="40dp">
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="0dp"
+               android:layout_weight="1" 
+               android:orientation="horizontal"
+               android:gravity="center_horizontal">
+
+               <TextView
+                   android:id="@+id/textView7"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="模式选择" 
+                   android:textColor="#000000"
+                   android:textSize="20px"/>
+
+           </LinearLayout>
 
            <Spinner
-               android:id="@+id/spinner1"
+               android:id="@+id/spinner"
                android:layout_width="match_parent"
-               android:layout_height="wrap_content" 
+               android:layout_height="0dp"
+               android:layout_weight="1" 
                />
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="0dp"
+               android:layout_weight="1" 
+               android:orientation="horizontal"
+               android:gravity="center_horizontal">
+
+               <Button
+                   android:id="@+id/button_comform"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="确认选择" />
+
+           </LinearLayout>
+
+           <RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="0dp"
+               android:layout_weight="2" 
+               android:orientation="horizontal">
+
+             
+
+               <Button
+                   android:id="@+id/button_settime"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignBaseline="@+id/textView1"
+                   android:layout_alignBottom="@+id/textView1"
+                   android:layout_centerHorizontal="true"
+                   android:text="定时设置 ＞＞" />
+
+           </RelativeLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content" >
+
+           </LinearLayout>
 
        </LinearLayout>
 
@@ -42,9 +144,104 @@
            android:layout_width="0dp"
            android:layout_weight="1"
            android:layout_height="match_parent"
-           android:orientation="vertical" >
+           android:background="@drawable/inner_ri"
+           android:orientation="vertical" 
+           android:padding="50dp">
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="0dp" 
+               android:layout_weight="0.5"
+               >
+
+               <TextView
+                   android:id="@+id/textView4"
+                   android:layout_width="0dp"
+                   android:layout_weight="1"
+                   android:gravity="center"
+                   android:layout_height="match_parent"
+                   android:text="电磁阀1" />
+
+               <TextView
+                   android:id="@+id/textView5"
+                   android:layout_width="0dp"
+                   android:layout_weight="1"
+                   android:gravity="center"
+                   
+                   android:layout_height="fill_parent"
+                   android:text="电磁阀2" />
+
+               <TextView
+                   android:id="@+id/textView8"
+                   android:layout_width="0dp"
+                   android:layout_weight="0.6"
+                   android:gravity="center"
+                   android:layout_height="match_parent"
+                   android:text="热泵开关" />
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="0dp" 
+               android:layout_weight="1" 
+               >
+
+               <LinearLayout
+                   android:layout_width="0dp"
+                   android:layout_weight="1"
+                        android:gravity="center"
+                   android:layout_height="match_parent"
+                   android:orientation="vertical" 
+                   >
+
+                   <CheckBox
+                       android:id="@+id/checkBox1"
+                      android:button="@null"
+                       android:layout_width="wrap_content"
+                       android:background="@drawable/checkedbutton"
+                       android:layout_height="wrap_content"
+                       
+                       />
+
+               </LinearLayout>
+
+               <LinearLayout
+                   android:layout_width="0dp"
+                   android:layout_height="match_parent"
+                   android:layout_weight="1"
+                   android:gravity="center"
+                   android:orientation="vertical" >
+
+                   <CheckBox
+                       android:id="@+id/checkBox2"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:background="@drawable/checkedbutton"
+                       android:button="@null"
+                       />
+
+               </LinearLayout>
+
+               <CheckBox
+                   android:id="@+id/box_power"
+                   android:layout_width="0dp"
+                   android:layout_weight="0.6"
+                   android:layout_height="match_parent"
+                   android:background="@drawable/powerbutton"
+                   android:button="@null" />
+
+           </LinearLayout>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+                android:gravity="center_horizontal"
+               android:layout_height="0dp" 
+               android:layout_weight="0.5">
+
            
-          
+
+           </LinearLayout>
 
        </LinearLayout>
 

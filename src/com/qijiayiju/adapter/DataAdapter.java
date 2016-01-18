@@ -14,12 +14,13 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class DataAdapter extends BaseAdapter{
-      List<Data> datas;
-      Context context;
-	public DataAdapter(List<Data> list,Context arg1) {
-		datas=list;
-		context=arg1;
+public class DataAdapter extends BaseAdapter {
+	List<Data> datas;
+	Context context;
+
+	public DataAdapter(List<Data> list, Context arg1) {
+		datas = list;
+		context = arg1;
 		// TODO Auto-generated constructor stub
 	}
 
@@ -50,15 +51,19 @@ public class DataAdapter extends BaseAdapter{
 					R.layout.listview_item, parent, false);
 			viewHolder.textView_item = (TextView) convertView
 					.findViewById(R.id.Text_detail);
-		
+
 			convertView.setTag(viewHolder);
 		} else {
 			viewHolder = (ViewHolder) convertView.getTag();
 		}
-		final Data data = datas.get(datas.size()-position-1);
-		viewHolder.textView_item.setText(data.getDate()+" "+data.getWendu_shinei()+data.getShidu_shinei()+"  "+data.getShidu_shiwai()+data.getWendu_shiwai()+"  "+data.getShidu_shiwai());
+		final Data data = datas.get(datas.size() - position - 1);
+		viewHolder.textView_item.setText(data.getDate() + " "
+				+ data.getWendu_shinei() + data.getShidu_shinei() + "  "
+				+ data.getShidu_shiwai() + data.getWendu_shiwai() + "  "
+				+ data.getShidu_shiwai());
 		return convertView;
 	}
+
 	public static class ViewHolder {
 		private TextView textView_item;
 	}

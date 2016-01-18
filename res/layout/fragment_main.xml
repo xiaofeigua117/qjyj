@@ -36,44 +36,50 @@
             <RadioButton
                 android:id="@+id/rb_main_menu1"
                 style="@style/TopMenu"
+                android:background="@drawable/menu1"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:text="系统首页" />
+                android:text="" />
 
             <RadioButton
                 android:id="@+id/rb_main_menu2"
                 style="@style/TopMenu"
+                android:background="@drawable/menu3"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:text="风机控制" />
+                android:text="" />
 
             <RadioButton
                 android:id="@+id/rb_main_menu3"
                 style="@style/TopMenu"
+                android:background="@drawable/menu2"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:text="@string/rejiahuan" />
+                android:text="" />
 
             <RadioButton
                 android:id="@+id/rb_main_menu4"
                 style="@style/TopMenu"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-                android:text="数据详情" />
+                android:background="@drawable/menu4"
+                android:text="" />
 
             <RadioButton
                 android:id="@+id/rb_main_menu5"
                 style="@style/TopMenu"
                 android:layout_height="0dp"
+                android:background="@drawable/menu6"
                 android:layout_weight="1"
-                android:text="更多设置" />
+                android:text="" />
 
             <RadioButton
                 android:id="@+id/rb_main_menu6"
                 style="@style/TopMenu"
                 android:layout_height="0dp"
+                android:background="@drawable/menu5"
                 android:layout_weight="1"
-                android:text="@string/qijiayiju" />
+                android:text="" />
         </RadioGroup>
 
     </LinearLayout>

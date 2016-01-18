@@ -15,12 +15,13 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 public class MyAboutAdapter extends BaseAdapter {
-   Context context;
-   List<Qijia> list;
+	Context context;
+	List<Qijia> list;
+
 	public MyAboutAdapter(Context context, List<Qijia> list) {
 		// TODO Auto-generated constructor stub
-		this.context=context;
-		this.list=list;
+		this.context = context;
+		this.list = list;
 	}
 
 	@Override
@@ -51,16 +52,17 @@ public class MyAboutAdapter extends BaseAdapter {
 					R.layout.listview_item, parent, false);
 			viewHolder.textView_item = (TextView) convertView
 					.findViewById(R.id.Text_detail);
-		
+
 			convertView.setTag(viewHolder);
 		} else {
 			viewHolder = (ViewHolder) convertView.getTag();
 		}
 		final Qijia data = list.get(position);
 		viewHolder.textView_item.setText(data.getName());
-		
+
 		return convertView;
 	}
+
 	public static class ViewHolder {
 		private TextView textView_item;
 	}

@@ -33,29 +33,30 @@ import android.widget.Toast;
 import android.os.Build;
 
 public class RecordActivity extends Activity {
-    
+
 	private ListView listView;
-     List<Data> Alllist;
-     DataAdapter adapter;
-     Button button_search;
-     Context context;
+	List<Data> Alllist;
+	DataAdapter adapter;
+	Button button_search;
+	Context context;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		 requestWindowFeature(Window.FEATURE_NO_TITLE);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_record);
-		Alllist=new ArrayList<Data>();
-		context=getApplicationContext();
-        button_search=(Button)findViewById(R.id.search_button);
-       
+		Alllist = new ArrayList<Data>();
+		context = getApplicationContext();
+		button_search = (Button) findViewById(R.id.search_button);
+
 		try {
-			Alllist=DBHelper.getUtils().findAll(Data.class);
+			Alllist = DBHelper.getUtils().findAll(Data.class);
 		} catch (DbException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		adapter=new DataAdapter(Alllist, context);
-		listView=(ListView)findViewById(R.id.listView1);
+		adapter = new DataAdapter(Alllist, context);
+		listView = (ListView) findViewById(R.id.listView1);
 		listView.setAdapter(adapter);
 		listView.setOnItemClickListener(new OnItemClickListener() {
 
@@ -63,41 +64,47 @@ public class RecordActivity extends Activity {
 			public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,
 					long arg3) {
 				// TODO Auto-generated method stub
-				Data mess=(Data) adapter.getItem(arg2);
-//				   new AlertDialog.Builder(RecordActivity.this)
-//		            .setIcon(R.drawable.logo)
-//		            .setTitle("详情")
-//		            .setMessage(mess.getDate()+mess.getTime()+mess.getShidu_shinei())
-				Mydialog dialog=new Mydialog(RecordActivity.this,R.style.MyDialog);
-			    View view=dialog.getCustomView();
-			   TextView dialog_data=(TextView)view.findViewById(R.id.dialog_data);
-			   dialog_data.setText(mess.getDate()+mess.getCo2()+"223456543");
-		            dialog.show();
+				Data mess = (Data) adapter.getItem(arg2);
+				// new AlertDialog.Builder(RecordActivity.this)
+				// .setIcon(R.drawable.logo)
+				// .setTitle("详情")
+				// .setMessage(mess.getDate()+mess.getTime()+mess.getShidu_shinei())
+				Mydialog dialog = new Mydialog(RecordActivity.this,
+						R.style.MyDialog);
+				View view = dialog.getCustomView();
+				TextView dialog_data = (TextView) view
+						.findViewById(R.id.dialog_data);
+				dialog_data.setText(mess.getDate() + mess.getCo2()
+						+ "223456543");
+				dialog.show();
 			}
 		});
-		 button_search.setOnClickListener(new OnClickListener() {
-				
-				@Override
-				public void onClick(View arg0) {
-					// TODO Auto-generated method stub
-					
-					try {
-						Toast.makeText(context, "更新数据", Toast.LENGTH_LONG).show();
-						//List<Data>  list= DBHelper.getUtils().findAll(Selector.from(Data.class).where("date" ,"=", "1970-01-02"));
-					//List<Data> list=new ArrayList<Data>();
-					  //  Alllist.clear();
-					    List<Data> list = DBHelper.getUtils().findAll(Data.class);//通过类型查找
-						//list=DBHelper.getUtils().findAll(Selector.from(Data.class) .where("id","<",54));
-					//	DBHelper.getUtils().f
-						Alllist.addAll(list);
-						adapter.notifyDataSetChanged();
-					} catch (DbException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-						//adapter.notifyDataSetInvalidated();
-						
-					}
+		button_search.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View arg0) {
+				// TODO Auto-generated method stub
+
+				try {
+					Toast.makeText(context, "更新数据", Toast.LENGTH_LONG).show();
+					// List<Data> list=
+					// DBHelper.getUtils().findAll(Selector.from(Data.class).where("date"
+					// ,"=", "1970-01-02"));
+					// List<Data> list=new ArrayList<Data>();
+					// Alllist.clear();
+					List<Data> list = DBHelper.getUtils().findAll(Data.class);// 通过类型查找
+					// list=DBHelper.getUtils().findAll(Selector.from(Data.class)
+					// .where("id","<",54));
+					// DBHelper.getUtils().f
+					Alllist.addAll(list);
+					adapter.notifyDataSetChanged();
+				} catch (DbException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+					// adapter.notifyDataSetInvalidated();
+
 				}
-			});
+			}
+		});
 	}
 }

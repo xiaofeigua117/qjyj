@@ -1,7 +1,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@android:color/holo_blue_light"
+    android:background="#49c1e8"
     android:orientation="vertical" >
 
     <RelativeLayout
@@ -33,7 +33,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
                 android:textSize="50px"
-                android:textColor="@android:color/holo_blue_light"
+                android:textColor="#49c1e8"
                 android:text="用户登录" />
 
         </RelativeLayout>
@@ -58,7 +58,7 @@
                     android:gravity="center"
                     android:layout_height="match_parent"
                     android:text="用户名"
-                    android:textColor="@android:color/holo_blue_light"
+                    android:textColor="#49c1e8"
                     android:textSize="33px" />
               <LinearLayout 
                   android:layout_width="0dp"
@@ -101,7 +101,7 @@
                     android:gravity="center"
                     android:layout_height="match_parent"
                     android:text="密码"
-                    android:textColor="@android:color/holo_blue_light"
+                    android:textColor="#49c1e8"
                     android:textSize="33px" />
 
                  <LinearLayout 

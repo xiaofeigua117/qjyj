@@ -24,7 +24,6 @@
 	    <item name="android:button">@null</item>
 	    <item name="android:textSize">20px</item>
 	    <item name="android:textColor">#fff</item>
-	   <item name="android:background">@drawable/menu_top</item> 
 <!-- 	    <item name="android:textColor">@drawable/words_selector</item> -->
 	    
 	</style>

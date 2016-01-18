@@ -16,22 +16,25 @@ public class Fragment_details extends Fragment {
 	ArrayAdapter<String> adapter;
 	TextView textView_detail;
 	String[] a;
+
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 
 	}
+
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
-		View view=inflater.inflate(R.layout.datadetail, container,false);
-		//getActivity().get
-		gridView=(GridView)view.findViewById(R.id.gridView1);
-		textView_detail=(TextView)view.findViewById(R.id.detail_content);
-		a=getResources().getStringArray(R.array.name);
-		adapter=new ArrayAdapter<String>(getActivity(),android.R.layout.simple_list_item_1,a);
+		View view = inflater.inflate(R.layout.datadetail, container, false);
+		// getActivity().get
+		gridView = (GridView) view.findViewById(R.id.gridView1);
+		textView_detail = (TextView) view.findViewById(R.id.detail_content);
+		a = getResources().getStringArray(R.array.name);
+		adapter = new ArrayAdapter<String>(getActivity(),
+				android.R.layout.simple_list_item_1, a);
 		gridView.setAdapter(adapter);
 		gridView.setOnItemClickListener(new OnItemClickListener() {
 
@@ -41,7 +44,8 @@ public class Fragment_details extends Fragment {
 				// TODO Auto-generated method stub
 				switch (id) {
 				case 0:
-					textView_detail.setText("室内温度   23.5摄氏度  ，室外温度33摄氏度，温差较大。新浪云主机（Sina Elastic Cloud 简称SEC）是潜心打造的新一代简单、可靠的IaaS服务，为您提供基于安全可靠的基础网络的高性能易扩展的计算服务。激活邀请码  已申请公测，等待发放邀请码优势支持Docker生态及周边管理系统（即将上线，敬请期待）秒级资源计费、共享SAE、微博支付体");
+					textView_detail
+							.setText("室内温度   23.5摄氏度  ，室外温度33摄氏度，温差较大。新浪云主机（Sina Elastic Cloud 简称SEC）是潜心打造的新一代简单、可靠的IaaS服务，为您提供基于安全可靠的基础网络的高性能易扩展的计算服务。激活邀请码  已申请公测，等待发放邀请码优势支持Docker生态及周边管理系统（即将上线，敬请期待）秒级资源计费、共享SAE、微博支付体");
 					break;
 				case 1:
 					textView_detail.setText("室外温度   33.5摄氏度  ，高于室温，注意避暑。");
@@ -55,9 +59,9 @@ public class Fragment_details extends Fragment {
 				case 4:
 					textView_detail.setText("室外风速  7 m。。。。。。。。。。");
 					break;
-				
+
 				}
-				
+
 			}
 		});
 		return view;

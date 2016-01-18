@@ -138,7 +138,7 @@ public class SerialPort {
 	 * @return 接收到的字符串
 	 */
 	public String receiveData(String type) {
-		
+
 		int size;
 		if (mInputStream == null) {
 			return null;

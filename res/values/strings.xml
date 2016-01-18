@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Control_v2</string>
+    <string name="app_name">齐家智能</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="_">风速值：</string>
-    <string name="title_activity_pop">PopActivity</string>
+    <string name="title_activity_pop">齐家智能</string>
     <string name="qijia">   北京齐家怡居科技有限公司（以下简称齐家怡居）是一家致力于提供微能耗（零能耗）高舒适度建筑的整体解决方案的高科技企业。齐家怡居集系统研发、节能建筑工程顾问、系统设计、零能耗建筑系统施工和投入使用后运营维护等职责于一体。齐家怡居在零能耗高舒适度建筑领域已走在行业前列，目前已拥有18项国家专利。如果您对环保事业有崇高的热情，对建筑环境有独特的看法，那么齐家怡居期待您的加入！</string>
     <string name="qijiayiju">关于齐家</string>
     <string name="rejiahuan">热量平衡</string>
